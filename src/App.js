@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import './App.css';
+import ComplaintForm from './ComplaintForm';
+import Navbar from "./components/Navbar";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Home from './pages/Home/Home';
+import Admin from './pages/Adminpages/Admin';
+import ComplaintPage from './pages/Complaintstudent/ComplaintPage';
+
+
+
+function App() {  return(
+  <div className="flex flex-col overflow-hidden">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<ComplaintForm />} />
+        <Route path="/home" element={<Home/>} />
+        <Route path="/admin" element={<Admin/>} />
+        <Route path="/home/history" element={<ComplaintPage/>} />
+
+
+       
+      </Routes>
     </div>
-  );
+   
+   
+   
+    );
 }
 
 export default App;

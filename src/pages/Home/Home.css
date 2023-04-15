@@ -1,0 +1,61 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+  }
+  .login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #8cbded;
+    padding: 100px;
+    border-radius: 8px;
+  
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .logintext {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #080101;
+    font-size: 20px;
+  }
+  
+  .radio-label {
+    font-size: 23px;
+  }
+  
+  .label {
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  .input-field label {
+    font-size: 18px; /* Increase font size */
+  }
+  
+  .btn-success {
+    width: 100%;
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .btn-text {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .btn-success:hover {
+    background-color: #05310f;
+    border-color: #218838;
+  }
+  
+  .alert {
+
+    color: darkred;
+    font-size: 15px;
+  }
+  

@@ -1,0 +1,42 @@
+/* ComplaintTable.css */
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #aaa7f4;
+  padding: 8px;
+  text-align: left;
+  font-size: 22px;
+}
+
+th {
+  background-color: #9d9de1;
+}
+
+/* Table header styles */
+thead th {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Table body styles */
+tbody td {
+  font-size: 14px;
+}
+
+/* Alternate row styles */
+tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* Hover effect on rows */
+tbody tr:hover {
+  background-color: #6d7dae;
+  cursor: pointer;
+}
+
