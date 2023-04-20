@@ -1,27 +1,30 @@
-name: Docker Image CI
+name: build
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: 
+      - master
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: docker login
-      env:
-        DOCKER_USER: ${{secrets.DOCKERHUB_USERNAME}}
-        DOCKER_PASSWORD: ${{secrets.DOCKERHUB_PASSWORD}}
+    - uses: actions/checkout@v1
+    - name: Use Node.js 13.10
+      uses: actions/setup-node@v1
+      with:
+        node-version: '18.0.0'
+    - name: Install yarn and run unittest
       run: |
-        docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD 
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag chamodrahul/node-test:$(date +%s)
-      
-    - name: Docker Push
-      run: docker push prith17/spemajorproject
+        yarn
+      env:
+        CI: true
+    - name: Publish to Github Packages Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: my_github_username/my_repository_name/my_image_name
+        registry: hub.docker.com
+        DOCKER_USER: ${{secrets.DOCKERHUB_USERNAME}}         
+        DOCKER_PASSWORD: ${{secrets.DOCKERHUB_PASSWORD}}
+        dockerfile: Dockerfile
+        tags: latest
