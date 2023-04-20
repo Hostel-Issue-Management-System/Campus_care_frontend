@@ -21,10 +21,10 @@ jobs:
       env:
         CI: true
     - name: Publish to Github Packages Registry
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v4
       with:
         name: prithvi17/spemajorproject/my_image_name
-        registry: docker.pkg.github.com
+        registry: docker.io
         username: ${{ secrets.GITHUB_USERNAME }}
         password: ${{ secrets.GITHUB_TOKEN }}
         dockerfile: Dockerfile
