@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 708153f194abbbb7ee715898fb90ce9b6ed4ff18
     "@mobiscroll/react-lite": "^4.10.9",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
