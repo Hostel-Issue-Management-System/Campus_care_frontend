@@ -1,0 +1,80 @@
+.dashboard-container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(23, 199, 244, 0.8); /* Updated background color with opacity */
+    border-radius: 8px; /* Added border radius for rounded edges */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Added box shadow for a subtle shading effect */
+  }
+  
+  h1 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .requests-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  .request-card {
+    max-width: 1000px;
+    border: 1px solid #090202;
+    padding: 20px;
+    background-color: #f2eaea;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .request-card:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .request-card h3 {
+    font-size: 20px;
+    margin-top: 0;
+    color: #0c0909;
+  }
+  
+  .request-card p {
+    color: #010000;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .resolved {
+    color: rgb(0, 254, 0);
+    font-weight: bold;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+.request-card.resolved {
+    background-color: #08f76c;
+    /* Change to desired green color */
+  }
+  .resolved {
+    color: green; /* Change to desired green color */
+    font-weight: bold;
+  }
+  .request-card .resolved {
+    color: green; /* Change to desired green color */
+    font-weight: bold;
+  }
+  
+  
