@@ -31,4 +31,4 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/spe_frontend:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/spe_major_frontend:latest
