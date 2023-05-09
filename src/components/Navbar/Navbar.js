@@ -1,10 +1,13 @@
 import React from "react";
 import "./navbar.css";
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import Login from "../../pages/Login/Login";
 
 
 
 const Navbar = () => {
+
 
   return (
     <>
@@ -18,34 +21,36 @@ const Navbar = () => {
         </div>
 
         {/* 2nd menu part  */}
-        <div  className="icons">
+        <div className="icons">
           <ul>
             <li>
-            <Link to="/home">
-            <h3>Home</h3>
-            </Link>
+              <Link to="/home">
+                <h3>Home</h3>
+              </Link>
             </li>
             <li>
-            <Link to="/createStudentComplaint">
-            <h3>Create Complaint</h3>
-            </Link>
+              <Link to="/createStudentComplaint">
+                <h3>Create Complaint</h3>
+              </Link>
             </li>
             <li>
-            <Link to="/viewStudentComplaint">
-            <h3>View Complaints</h3>
-            </Link>
+              <Link to="/viewStudentComplaint">
+                <h3>View Complaints</h3>
+              </Link>
             </li>
             <li>
-            <h2>Home</h2>
+              <Link to="/">
+                <h3>Logout</h3>
+              </Link>
             </li>
           </ul>
         </div>
 
-        
-       
+
+
       </nav>
 
-    
+
     </>
   );
 };

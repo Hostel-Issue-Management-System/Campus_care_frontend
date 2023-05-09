@@ -1,61 +1,72 @@
-.login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 200px;
-  }
-  .login-form {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #8cbded;
-    padding: 100px;
-    border-radius: 8px;
-  
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .logintext {
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #080101;
-    font-size: 20px;
-  }
-  
-  .radio-label {
-    font-size: 23px;
-  }
-  
-  .label {
-    margin-bottom: 15px;
-    font-size: 24px;
-  }
-  .input-field label {
-    font-size: 18px; /* Increase font size */
-  }
-  
-  .btn-success {
+body {
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    max-width: 670px;
     width: 100%;
-    background-color: #28a745;
-    border-color: #28a745;
-  }
-  
-  .btn-text {
-    font-size: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  
-  .btn-success:hover {
-    background-color: #05310f;
-    border-color: #218838;
-  }
-  
-  .alert {
+    height: 300px;
+    margin: 10px auto;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: white;
+    background: linear-gradient(20deg, rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url("https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20(1%20of%201)-5.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=92b4ef70a4e06a7e7bf54e1bde61b624&auto=format&fit=crop&w=1950&q=80") no-repeat center center fixed;
+}
 
-    color: darkred;
-    font-size: 15px;
-  }
-  
+
+.w-txt {
+    font-size: 70px;
+    color: white;
+    margin: 0 auto;
+    margin-left: 100px;
+    margin-top: 200px;
+
+}
+
+.remove-top-margin {
+    margin-top: 0;
+}
+
+.logo {
+    border-radius: 50%;
+    max-width: 150px;
+    max-height: 180px;
+}
+
+.logo-placeholder {
+    padding: 5px;
+    text-align: center;
+}
+
+.content {
+    padding: 0 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.counter {
+    width: 500px;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .counter {
+        width: 450px;
+    }
+
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .counter {
+        width: 350px;
+    }
+
+}

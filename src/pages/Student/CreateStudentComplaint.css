@@ -1,0 +1,145 @@
+.complaint-form-container1 {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-left: 0px;
+  height: 580px;
+  padding: 20px;
+  background-color: #333334;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.87;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+
+}
+
+.complaint-form-title {
+  color: white;
+}
+
+.complaint-form-select {
+  font-size: large;
+  width: 100%;
+  height: 24px;
+}
+
+.form-control-txt {
+  font-size: large;
+  width: 100%;
+  height: 24px;
+
+}
+
+.form-control-des {
+  font-size: large;
+  width: 100%;
+  height: 150px;
+}
+
+/* .complaint-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin-top: 20px;
+  } */
+
+/* .complaint-form-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  } */
+
+
+.complaint-form-textarea {
+  width: 100%;
+  padding: 50px;
+  margin-bottom: px;
+  font-size: 100px;
+  border-radius: 500px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.complaint-form-select {}
+
+.complaint-form-input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  font-size: 100px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #8cbded;
+  padding: 100px;
+  border-radius: 8px;
+
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.logintext {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #080101;
+  font-size: 20px;
+}
+
+.radio-label {
+  font-size: 23px;
+}
+
+.label {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.input-field label {
+  font-size: 18px;
+  /* Increase font size */
+}
+
+.btn-success {
+  width: 100%;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-text {
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.btn-success:hover {
+  background-color: #05310f;
+  border-color: #218838;
+}
+
+.alert {
+
+  color: darkred;
+  font-size: 15px;
+}

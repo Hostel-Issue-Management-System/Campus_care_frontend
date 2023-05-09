@@ -1,0 +1,57 @@
+.thead-txt{
+    font-weight: 100;
+    color:white;
+}
+
+.upd-btn{
+    margin: 0 auto;
+    margin-left: 280px;
+    text-align: center;
+}
+
+/* ComplaintTable.css */
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    border: 1px solid rgb(69, 57, 248);
+    padding: 8px;
+    text-align: left;
+    font-size: 19px;
+    color: #000;
+    font-weight:bold;
+  }
+  
+  th {
+    background-color:rgba(91, 91, 175, 0.8);
+  }
+  
+  /* Table header styles */
+  thead th {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Table body styles */
+  tbody td {
+    font-size: 14px;
+  }
+  
+  /* Alternate row styles */
+  tbody tr {
+    background-color: #ffffff;
+    opacity: 0.85;
+  }
+  
+  /* Hover effect on rows */
+  tbody tr:hover {
+    background-color: #6d7dae;
+    cursor: pointer;
+  }
+  
+  
