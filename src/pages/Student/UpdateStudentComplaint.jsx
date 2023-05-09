@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import './CreateStudentComplaint.css';
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 function UpdateStudentComplaint() {
@@ -14,105 +15,44 @@ function UpdateStudentComplaint() {
     const [description, setDescription] = useState('');
     const [roomNumber, setRoomNumber] = useState('');
     const [status, setStatus] = useState('Open');
-    const [studentId, setStudentId] = useState('');
-    //   const history = useHistory();
+    const [rollNumber, setRollNumber] = useState(JSON.parse(localStorage.getItem("user")).rollNumber);
 
-    //   useEffect(() => {
-    //     if (id === '_add') {
-    //       return;
-    //     }
-    //     StudentComplaintService.getEmployeeById(id)
-    //       .then((res) => {
-    //         const employee = res.data;
-    //         setFirstName(employee.firstName);
-    //         setLastName(employee.lastName);
-    //         setEmailId(employee.emailId);
-    //       });
-    //   }, [id]);
-
-
-
-    const notify = () => {
-        // inbuilt-notification
-        toast.warning('Danger')
-        // inbuilt-notification
-        toast.success('🦄 Wow so easy!', {
-            position: "bottom-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-        });
-        // inbuilt-notification
-        toast.info('GeeksForGeeks')
-        // inbuilt-notification
-        toast.error('Runtime error')
-        // default notification
-        toast('Hello Geeks')
-
-    }
 
     const updateComplaint = (e) => {
         e.preventDefault();
-        setStatus('Open')
-        const studentComplaint = { complaintId, complaintType, description, roomNumber, status, studentId };
+        const studentComplaint = { complaintId, complaintType, description, roomNumber, status, rollNumber };
+
         console.log('studentComplaint => ' + JSON.stringify(studentComplaint));
-        StudentComplaintService.updateStudentComplaint(studentComplaint)
+        StudentComplaintService.updateStudentComplaint(studentComplaint).then((data) => {
+            if (data.status === 200) {
+                toast.success("Complaint Updated Successfully!!")
+            }
+        })
 
     };
 
-    const changeComplaintTypeHandler = (event) => {
-        setComplaintType(event.target.value);
-    };
 
-    const changeDescriptionHandler = (event) => {
-        setDescription(event.target.value);
-    };
-
-    const changeRoomNumberHandler = (event) => {
-        setRoomNumber(event.target.value);
-    };
-
-    const changeStatusHandler = (event) => {
-        setStatus(event.target.value);
-    };
-
-    const changeStudentIdHandler = (event) => {
-        setStudentId(event.target.value);
-    };
 
 
 
     return (
-        <div className="complaint-form-container">
+        <div className="complaint-form-container1">
+
             <h1 className="complaint-form-title">Complaint Form</h1>
 
             <form>
-                <div className="form-group">
-                    <label> Student Id: </label>
-                    <input
-                        placeholder="Student Id"
-                        name="studentId"
-                        className="form-control"
-                        value={studentId}
-                        onChange={(event) => setStudentId(event.target.value)}
-                    />
-                </div>
                 <div className="form-group">
                     <label> Complaint Id: </label>
                     <input
                         placeholder="Complaint Id"
                         name="complaintId"
-                        className="form-control"
+                        className="form-control-txt"
                         value={complaintId}
                         onChange={(event) => setComplaintId(event.target.value)}
                     />
                 </div>
                 <div className="form-group">
-                    <label> Complaint Type: </label>
+                    <label className='label-txt'> Complaint Type: </label>
                     <select
                         id="complaintType"
                         value={complaintType}
@@ -131,7 +71,7 @@ function UpdateStudentComplaint() {
                     <input
                         placeholder="Room Number"
                         name="roomNumber"
-                        className="form-control"
+                        className="form-control-txt"
                         value={roomNumber}
                         onChange={(event) => setRoomNumber(event.target.value)}
                     />
@@ -146,7 +86,7 @@ function UpdateStudentComplaint() {
                         placeholder="Description"
                         value={description}
                         onChange={(event) => setDescription(event.target.value)}
-                        className="form-control"
+                        className="form-control-des"
                         name="description"
                     ></textarea>
                 </div>
@@ -155,7 +95,13 @@ function UpdateStudentComplaint() {
                 <button className="btn btn-success" onClick={updateComplaint}>Submit</button>
                 {/* <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Cancel</button> */}
             </form>
+            <div className='button-label'>
+                <Link to="/home">
+                    <h4 className='font-clr-h5'>Back to Home</h4>
+                </Link>
+            </div>
             <ToastContainer />
+
         </div>
     );
 };

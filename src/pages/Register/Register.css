@@ -1,0 +1,92 @@
+.login-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  background-color: #333334;
+  width: 350px;
+  /* Adjust the width as needed */
+  margin: 0 auto;
+  height: 350px;
+  /* Center the login box horizontally */
+  opacity: 0.87;
+}
+
+/* .complaint-form-select{
+  width: 100%;
+  padding: 5px;
+  margin-top: 100px;
+  margin-left: 10px;
+  font-size: 100px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  
+} */
+
+.label-txt1 {
+
+  width: 100%;
+  font-weight: 800;
+  /* font-size: 24px; */
+  margin: 0 auto;
+  margin-left: 100px;
+  margin-bottom: 10px;
+
+}
+
+.label-txt2 {
+
+  width: 100%;
+  font-weight: 800;
+  /* font-size: 24px; */
+  margin: 0 auto;
+  margin-left: 90px;
+  margin-bottom: 10px;
+
+}
+
+.label-txt3 {
+
+  width: 100%;
+  font-weight: 800;
+  /* font-size: 24px; */
+  margin: 0 auto;
+  margin-left: 80px;
+  margin-bottom: 10px;
+
+}
+
+.login-txt {
+
+  color: rgb(69, 57, 248);
+  font-size: large;
+  font-weight: 1000;
+
+}
+
+.login-txt1 {
+
+  color: white;
+  font-size: large;
+  font-weight: 1000;
+  margin-top: 20px;
+
+}
+
+
+.font-clr-h5 {
+  /* font-size: small; */
+
+  color: rgb(69, 57, 248);
+  /* font-size: small; */
+  /* font-weight: 1000; */
+}
+
+.btn-success {
+  background-color: #4ebb33;
+  border-color: #030403;
+  padding: 4px 10px;
+  /* Adjust the padding to change the button size */
+  font-size: 16px;
+}

@@ -1,34 +1,53 @@
 import axios from 'axios';
 
 const STUDENT_COMPLAINT_API_BASE_URL = "http://localhost:9101/complaintRecord";
+const STUDENT_REGISTER_API_BASE_URL = "http://localhost:9101/auth";
 
 
 class StudentComplaintService {
 
-    getEmployees(){
+    getEmployees() {
         return axios.get(STUDENT_COMPLAINT_API_BASE_URL);
     }
 
-    createStudentComplaint(studentComplaint){
-        console.log(STUDENT_COMPLAINT_API_BASE_URL+'/addComplaintRecord')
+    register(details) {
+        console.log(STUDENT_REGISTER_API_BASE_URL + '/register')
+        console.log(details)
+        return axios.post(STUDENT_REGISTER_API_BASE_URL + '/register', details);
+    }
+
+    createStudentComplaint(studentComplaint) {
+        console.log(STUDENT_COMPLAINT_API_BASE_URL + '/addComplaintRecord')
         console.log(studentComplaint)
-        return axios.post(STUDENT_COMPLAINT_API_BASE_URL+'/addComplaintRecord', studentComplaint);
+        return axios.post(STUDENT_COMPLAINT_API_BASE_URL + '/addComplaintRecord', studentComplaint);
     }
 
-    getStudentComplaint(studentId){
-        return axios.post(STUDENT_COMPLAINT_API_BASE_URL + '/getComplaintRecordByStudentId/' + studentId);
+    getStudentComplaint(rollNumber) {
+        console.log(rollNumber)
+        console.log(STUDENT_COMPLAINT_API_BASE_URL + '/getComplaintRecordByRollNumber/' + rollNumber)
+        return axios.post(STUDENT_COMPLAINT_API_BASE_URL + '/getComplaintRecordByRollNumber/' + rollNumber);
     }
 
-    updateStudentComplaint(studentComplaint){
+    getStudentComplaint(rollNumber) {
+        console.log(rollNumber)
+        console.log(STUDENT_COMPLAINT_API_BASE_URL + '/getComplaintRecordByRollNumber/' + rollNumber)
+        return axios.post(STUDENT_COMPLAINT_API_BASE_URL + '/getComplaintRecordByRollNumber/' + rollNumber);
+    }
+    getAllStudentComplaint(rollNumber) {
+        console.log(STUDENT_COMPLAINT_API_BASE_URL + '/getAllComplaintRecords')
+        return axios.get(STUDENT_COMPLAINT_API_BASE_URL + '/getAllComplaintRecords');
+    }
+
+    updateStudentComplaint(studentComplaint) {
         return axios.put(STUDENT_COMPLAINT_API_BASE_URL + '/updateComplaintRecord', studentComplaint);
     }
 
-    resolveStudentComplaintById(complaintId){
-        console.log(STUDENT_COMPLAINT_API_BASE_URL+'/resolveComplaintRecordByComplaintId/'+ complaintId);
-        return axios.put(STUDENT_COMPLAINT_API_BASE_URL + '/resolveComplaintRecordByComplaintId/'+ complaintId);
+    resolveStudentComplaintById(complaintId) {
+        console.log(STUDENT_COMPLAINT_API_BASE_URL + '/resolveComplaintRecordByComplaintId/' + complaintId);
+        return axios.put(STUDENT_COMPLAINT_API_BASE_URL + '/resolveComplaintRecordByComplaintId/' + complaintId);
     }
 
-    deleteStudentComplaint(complaintId){
+    deleteStudentComplaint(complaintId) {
         return axios.delete(STUDENT_COMPLAINT_API_BASE_URL + '/deleteComplaintRecordByComplaintId/' + complaintId);
     }
 }
