@@ -48,10 +48,10 @@ function CreateStudentComplaint() {
                             className="complaint-form-select"
                         >
                             <option value="">-- Select complaint type --</option>
-                            <option value="electricity">Electricity</option>
-                            <option value="plumbing">Plumbing</option>
-                            <option value="cleanliness">Cleanliness</option>
-                            <option value="others">Others</option>
+                            <option value="Electricity">Electricity</option>
+                            <option value="Plumbing">Plumbing</option>
+                            <option value="Cleanliness">Cleanliness</option>
+                            <option value="Others">Others</option>
                         </select>
                     </div>
                     <div className="form-group">
