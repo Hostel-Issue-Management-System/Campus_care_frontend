@@ -15,7 +15,7 @@ function Home() {
         <div>
             <Navbar />
 
-            <h1 className='w-txt'>Welcome {name} !!</h1>
+            <h2 className='w-txt'>Welcome {name} !!</h2>
 
 
         </div>
